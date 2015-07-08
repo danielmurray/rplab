@@ -49,10 +49,10 @@
                     </button>
                 </div>
                 <div class="logo-container">
-                    <div class="navbar-brand page-scroll" href="#page-top">
-                        <p>UIRPL</p>
+                    <a class="navbar-brand page-scroll" href="#page-top">
+                        <p href="#page-top">UIRPL</p>
                         <img class="logo" src="img/logo2.png"></img>
-                    </div>
+                    </a>
                 </div>
                 <div class="print-now">PRINT&nbsp;NOW</div>
             </div>
@@ -62,7 +62,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#printers">Printers</a>
+                        <a class="page-scroll" href="#lab">Lab</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -95,13 +95,16 @@
         </div>
     </header>
 
-    <section class="no-padding" id="printers">
+    <section id="lab">
         <div class="container-fluid">
-            <div class="our-printers"><h2>Our Printers</h2><div>
             <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Lab</h2>
+                    <hr class="primary">
+                <div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/sls.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/sls.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -114,9 +117,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/pj.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/pj.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -129,9 +132,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/sla.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/sla.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -144,9 +147,9 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/fdm.jpg" class="img-responsive" alt="">
+                        <img src="img/portfolio/fdm.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -170,7 +173,30 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">About</h2>
                     <hr class="light">
-                    <p class="text-faded">The MechSE Rapid Prototyping Lab was made possible by a substantial gift of $750,000 by the Ford Motor Company in 1995. The purpose of the MechSE RP Lab is to allow students access to current manufacturing technologies in their course work, independent projects, and research. The RP Lab is equipped with a number of systems, including CNC milling and turning centers; a wire EDM machine; and three rapid prototyping systems.</p>
+                    <p class="text-faded">The MechSE Rapid Prototyping Lab was made possible by a substantial gift of $750,000 by the Ford Motor Company in 1995. The purpose of the MechSE RP Lab is to allow students access to current manufacturing technologies in their course work, independent projects, and research. The RP Lab is used heavily by courses in the engineering mechanics and mechanical engineering curriculum, including:
+                    <p>
+                    <ul class="courses fa-ul">
+                        <li>
+                            <span class="course-dept">ME</span>
+                            <span class="course-number">170</span>
+                            <span class="course-title text-faded">Computer-Aided Design</span>
+                        </li>
+                        <li>
+                            <span class="course-dept">ME</span>
+                            <span class="course-number">350</span>
+                            <span class="course-title text-faded">Design for Manufacturability</span>
+                        </li>
+                        <li>
+                            <span class="course-dept">ME</span>
+                            <span class="course-number">470</span>
+                            <span class="course-title text-faded">Senior Design Project</span>
+                        </li>
+                        <li>
+                            <span class="course-dept">TAM</span>
+                            <span class="course-number">302</span>
+                            <span class="course-title text-faded">Engineering Design Principles</span>
+                        </li>
+                    </ul>
                     <!-- <a href="#" class="btn btn-default btn-xl">Get Started!</a> -->
                 </div>
             </div>
@@ -181,7 +207,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">How To</h2>
+                    <h2 class="section-heading">How To Print</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -190,28 +216,28 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary"></i>
+                        <i class="fa fa-4x fa-file wow bounceIn text-primary"></i>
                         <h3>1. Create an STL</h3>
                         <p class="text-muted">Using your favorite CAD software output your part as a STL (STereoLithography) file.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <i class="fa fa-4x fa-usd wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>2. Get a Quote</h3>
                         <p class="text-muted">Upload your STL file for a quote on how much your part will cost to print.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <i class="fa fa-4x fa-ticket wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>3. Create a Ticket</h3>
                         <p class="text-muted">Upload your file and generate a ticket to put your part in the queue.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <i class="fa fa-4x fa-cube wow bounceIn text-primary" data-wow-delay=".3s"></i>
                         <h3>4. Pick it Up</h3>
                         <p class="text-muted">Come claim your part at the lab or we can ship it to you!</p>
                     </div>

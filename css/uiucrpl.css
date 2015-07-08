@@ -162,6 +162,7 @@ aside {
 
 .navbar-default .navbar-headr .logo-container{
     width: inherit;
+    cursor: pointer;
 }
 
 .navbar-default .navbar-headr .navbar-brand .logo{
@@ -476,6 +477,8 @@ header .header-content .header-content-inner p {
 
 }
 
+.
+
 .portfolio-box {
     display: block;
     position: relative;
@@ -486,8 +489,9 @@ header .header-content .header-content-inner p {
 }
 
 .portfolio-box img{
-    width: 100%;
-    height: 100%;
+    height: 325px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 .portfolio-box .portfolio-box-caption {
@@ -543,8 +547,37 @@ header .header-content .header-content-inner p {
     }
 }
 
+#about .courses{
+    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    margin: 0 auto;
+    list-style: none;
+}
+
+#about .courses .course-dept{
+    font-size: 30px;
+}
+
+#about .courses .course-number{
+    font-size: 45px;
+}
+
+#about .courses .course-title{
+
+}
+
 .call-to-action h2 {
     margin: 0 auto 20px;
+}
+
+.call-to-action .btn-xl {
+    height: 65px;
+    background-color: #286293;
+    background-color: #ee4b28;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 23px 35px 0 35px;
+    border-radius: 0px;
 }
 
 .text-primary {
