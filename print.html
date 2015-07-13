@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>UIRPL</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="css/fonts.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/print.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+
+</head>
+
+<body id="page-top">
+
+    <nav id="printNav" class="navbar navbar-default navbar-fixed-top affix">
+        <div class="navbar-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-headr">
+                <div>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="logo-container">
+                    <a class="navbar-brand page-scroll" href="./index.html">
+                        <p>UIRPL</p>
+                        <img class="logo" src="img/logo2.png"></img>
+                    </a>
+                </div>
+                <a href="./print.html" class="print-now">PRINT&nbsp;PART</a>
+            </div>
+            
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#create">Create</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#quote">Quote</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#ticket">Ticket</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#pickup">Pick up</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <section id="create">
+        <div class="container-fluid">
+            <div class="row gutters">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">1. Create an STL</h2>
+                    <hr class="primary">
+                    <p>First thing is first, you got to create an STL file.<br />Not sure how to make an STL file? Click on your CAD software below for step by step instructions!<p>
+                <div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <a href="http://www.stratasys.com/customer-support/cad-to-stl/autodesk-inventor" class="portfolio-box" target="_blank">
+                    <img src="img/portfolio/ai.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Inventor
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <a href="http://www.stratasys.com/customer-support/cad-to-stl/solidworks" class="portfolio-box" target="_blank">
+                    <img src="img/portfolio/pe.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Pro-E
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <a href="http://www.stratasys.com/customer-support/cad-to-stl/proengineer" class="portfolio-box" target="_blank">
+                    <img src="img/portfolio/sw.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                 	Solidworks
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg-primary" id="quote">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">2. Get a Quote</h2>
+                    <hr class="light">
+                    <p>Next, you'll want to know how much your part is going to cost. Enter in your part's volume and the printer you want to print on for a price quote.<p>
+                </div>
+            </div>
+            <div class="row">
+                <div id="quoteReceipt" class="receipt">
+                    <div class="receipt-header">
+                        <div class="receipt-fold"></div>
+                        <div class="receipt-staple"></div> 
+                        <div class="receipt-title">
+                            <h3>UIRPL 3D Print Quote</h3>
+                        </div> 
+                    </div>
+                    <div class="receipt-items">
+                        <script type="text/template" id="receipt-item">
+                            <div class="receipt-item-wrapper">
+                                <div class="receipt-item" >
+                                    <div class="part-specs">
+                                        <div class="volume">
+                                            <h4>Volume:</h4>
+                                            <input name="volume" type="number" class="form-control" value=0></input>
+                                            <select class="form-control" id="unit1">
+                                                <option>mm&#179;</option>
+                                                <option>cm&#179;</option>
+                                                <option>in&#179;</option>
+                                            </select>
+                                        </div>
+                                        <div class="printer">
+                                            <h4>Printer:</h4>
+                                            <select class="form-control" id="print1">
+                                                <option>SLS</option>
+                                                <option>PolyJet</option>
+                                                <option>SLA</option>
+                                                <option>FDM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="cost">
+                                        <i class="remove-part fa fa-close"></i>
+                                        $0.00
+                                    </div>
+                                </div>
+                                <div class="separator"></div>
+                            </div>
+                        </script>
+                    </div>
+                    <div class="add-part" >
+                        +
+                    </div>
+                    <div class="receipt-footer">
+                        <div id="subtotal" class="receipt-footer-item subtotal">
+                            <div class="key">
+                                Sub Total:
+                            </div>
+                            <div class="value">
+                                $0
+                            </div>
+                        </div> 
+                        <div id="startup-cost" class="receipt-footer-item startup-cost">
+                            <div class="key">
+                                Startup Cost:
+                            </div>
+                            <div class="value">
+                                $5.00
+                            </div>
+                        </div> 
+                        <div id="total" class="receipt-footer-item total">
+                            <div class="key">
+                                Total:
+                            </div>
+                            <div class="value">
+                                $5
+                            </div>
+                        </div>   
+                    </div>
+                    <div class="receipt-button">
+                        <div class="text">
+                            <i class="fa fa-calculator"></i>
+                            <h4>Generate Quote</h4> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ticket">
+        <div class="container-fluid">
+            <div class="row gutters">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">3. Submit a Ticket</h2>
+                    <hr class="primary">
+                    <p>You're almost there!<br />If you're a student, all you have left to do is fill out a form on<br />the University's online ticketing system to get your part inline to print. 
+                    </p>
+                    	<a href="https://www-s.mechse.uiuc.edu/rplab/notice.php" class="btn btn-default btn-xl wow tada" target="_blank">Submit a Ticket</a>
+
+                    <p>If you are a not a student, send us an email, we'll help you get setup<p>
+                    <a href="mailto:mechse-rplab@illinois.edu" class="print-now btn btn-default btn-xl wow tada">Send us an Email</a>
+                <div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pickup" class="bg-dark">
+        <div class="container text-center">
+            <div>
+        		<h2 class="section-heading">
+        			<span class='strikeout'>4. PROFIT!!!</span> 
+            	</h2>
+                <h2 class="section-heading">
+                	4. Pick up your part!
+                </h2>
+                <hr class="light">
+            </div>
+            <div class="col-lg-4 col-sm-6 col-lg-offset-2 text-center ">
+            	<i class="fa fa-cube fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+            	<p>You can come pick up your parts at the MEL outside the Rapid Prototyping Lab, room 2051.
+                </p>
+                <i class="fa fa-map-marker fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                <p>Room 2051<br />
+                105 South Mathews Avenue<br />
+                Urbana, IL 61801</p>
+            </div>
+            <!-- <div class="col-lg-4 col-sm-6 text-center">
+                <iframe width="350" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=University%20of%20Illinois%20at%20Urbana-Champaign%20Mechanical%20Engineering%20Building%2C%20West%20Green%20Street%2C%20Urbana%2C%20Illinois%2C%20United%20States&key=AIzaSyD9oHmO9F2nXYRWlyjlmBMQy6VdL5GmMXU"></iframe>
+            </div> -->
+        </div>
+    </section>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/us.js"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/uirplprint.js"></script>
+</body>
+
+</html>
