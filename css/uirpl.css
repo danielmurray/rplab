@@ -406,6 +406,7 @@ header .header-content .header-content-inner h1 .al{
 
 header .header-content .header-content-inner h1 .nal{
     display: none;
+    font-size: 20px;
 }
 
 @media(min-width:768px) {
