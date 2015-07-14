@@ -115,69 +115,64 @@
     color: rgb(140,140,140);
     padding: 20px 30px 0 30px;
     margin-bottom: 5px;
-
-    display: flex;
-    flex-wrap: nowrap;
 }
 
-.receipt .receipt-item .part-specs{
-    order: 1;
-    flex-grow: 6;
+.receipt .receipt-item .volume-wrapper,
+.receipt .receipt-item .printer-wrapper,
+.receipt .receipt-item .cost-wrapper{
+    width: 100%;
+    height: 40px;
 }
 
-.receipt .receipt-item .part-specs .printer,
-.receipt .receipt-item .part-specs .volume{
-    display: flex;
-    justify-content: space-between;
-    /*flex-wrap: nowrap;*/
+.receipt .receipt-item .volume-wrapper .input-key,
+.receipt .receipt-item .printer-wrapper .input-key{
+    float: left;
+    width: 25%;
 }
 
-.receipt .receipt-item .part-specs .printer h4,
-.receipt .receipt-item .part-specs .volume h4{
-    margin-right: 10px;
+.receipt .receipt-item .volume-wrapper .input-wrapper,
+.receipt .receipt-item .printer-wrapper .input-wrapper{
+    float: right;
+    width: 70%;
 }
 
-.receipt .receipt-item .part-specs .printer select{
-    flex-basis: 200px;
+.receipt .receipt-item .volume-wrapper .input-wrapper input{
+    width: 180px;
+    float: left;
 }
 
-.receipt .receipt-item .part-specs .volume input{
-    flex-basis: 120px
+.receipt .receipt-item .volume-wrapper .input-wrapper h4{
+    float: right;
 }
 
-.receipt .receipt-item .part-specs .volume select{
-    flex-basis: 65px;
-    border-width: 0px;
-    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.075);
-    box-shadow: inset 0 0px 0px rgba(0,0,0,.075); 
+.receipt .receipt-item .cost .cost-key,
+.receipt .receipt-item .cost .cost-value{
+    float: right;
 }
 
-.receipt .receipt-item .cost{
-    position: relative;
 
-    order: 2;
-    flex-grow: 1;
-    flex-basis: 75px;
-
-    text-align: right;
+.receipt .receipt-item .cost-wrapper{
     font-size: 18px;
-    padding: 25px 0;
-}
 
-.receipt .receipt-item .cost .remove-part{
-    position: absolute;
-    top: -10px;
-    right: 0;
-    cursor: pointer;
-}
-
-.receipt .separator{
-    width: 340px;
-    margin: 0 auto;
     border-style: dotted;
     border-width: 0 0 2px 0;
     border-color: rgb(210,210,210);
     padding-bottom: 10px;
+}
+
+.receipt .receipt-item .cost-wrapper i{
+    float: left;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.receipt .receipt-item .cost-wrapper i:hover{
+    color: white;
+    background-color: rgb(140,140,140);
+}
+
+.receipt .receipt-item .cost-wrapper h4{
+    float: right;
 }
 
 .receipt .add-part{
@@ -220,30 +215,15 @@
     float: right;
 }
 
-.receipt .receipt-button{
-    width: 100%;
-    color: white;
-    background-color: rgb(40, 98, 147);
-    padding: 20px 20px;
-    cursor: pointer;
-}
+.receipt .receipt-tear{
+    float: left;
 
-.receipt .receipt-button:hover{
-    background-color: rgba(40, 98, 147, 0.75);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px;
+    border-color: rgb(240,240,240) transparent transparent transparent;
 }
-
-.receipt .receipt-button .text{
-    width: auto;
-    margin: 0 90px;
-}
-
-.receipt .receipt-button .text i,
-.receipt .receipt-button .text h3{
-    font-size: 18px;
-    float:left;
-    margin: 0 10px;
-}
-
 
 /*
  * Start Bootstrap - Creative Bootstrap Theme (http://startbootstrap.com)

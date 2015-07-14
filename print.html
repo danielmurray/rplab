@@ -88,9 +88,9 @@
                     <hr class="primary">
                     <p>First thing is first, you got to create an STL file.<br />Not sure how to make an STL file? Click on your CAD software below for step by step instructions!<p>
                 <div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <a href="http://www.stratasys.com/customer-support/cad-to-stl/autodesk-inventor" class="portfolio-box" target="_blank">
-                    <img src="img/portfolio/ai.png" class="img-responsive" alt="">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="img/cad/ai.pdf" class="portfolio-box" target="_blank">
+                    <img src="img/cad/ai.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -100,25 +100,37 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <a href="http://www.stratasys.com/customer-support/cad-to-stl/solidworks" class="portfolio-box" target="_blank">
-                    <img src="img/portfolio/pe.png" class="img-responsive" alt="">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="img/cad/pe.pdf"class="portfolio-box" target="_blank">
+                    <img src="img/cad/cep.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Pro-E
+                                    PTC Creo Elements/Pro "ProE"
                                 </div>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <a href="http://www.stratasys.com/customer-support/cad-to-stl/proengineer" class="portfolio-box" target="_blank">
-                    <img src="img/portfolio/sw.png" class="img-responsive" alt="">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="img/cad/sw.pdf" class="portfolio-box" target="_blank">
+                    <img src="img/cad/sw.png" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                 	Solidworks
+                                    Solidworks
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <a href="img/cad/nx.pdf" class="portfolio-box" target="_blank">
+                    <img src="img/cad/nx.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    Siemens NX Unigraphics
                                 </div>
                             </div>
                         </div>
@@ -140,6 +152,7 @@
             </div>
             <div class="row">
                 <div id="quoteReceipt" class="receipt">
+                <script type="text/template" id="receipt-template">
                     <div class="receipt-header">
                         <div class="receipt-fold"></div>
                         <div class="receipt-staple"></div> 
@@ -147,39 +160,50 @@
                             <h3>UIRPL 3D Print Quote</h3>
                         </div> 
                     </div>
-                    <div class="receipt-items">
-                        <script type="text/template" id="receipt-item">
-                            <div class="receipt-item-wrapper">
-                                <div class="receipt-item" >
-                                    <div class="part-specs">
-                                        <div class="volume">
-                                            <h4>Volume:</h4>
-                                            <input name="volume" type="number" class="form-control" value=0></input>
-                                            <select class="form-control" id="unit1">
-                                                <option>mm&#179;</option>
-                                                <option>cm&#179;</option>
-                                                <option>in&#179;</option>
-                                            </select>
-                                        </div>
-                                        <div class="printer">
-                                            <h4>Printer:</h4>
-                                            <select class="form-control" id="print1">
-                                                <option>SLS</option>
-                                                <option>PolyJet</option>
-                                                <option>SLA</option>
-                                                <option>FDM</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="cost">
-                                        <i class="remove-part fa fa-close"></i>
-                                        $0.00
+                        <div class="receipt-items">
+                        <%
+                            var m = function(n){return n.toFixed(2)}
+                            var subtotal = 0;
+                            _.each(parts, function(part){
+                                var partPrinter = printers[part.printer]
+                                var partCost = part.vol * partPrinter.cost
+                                subtotal += partCost
+                                // console.log(part)
+                        %>
+                            <div id=<%=part.id%> class="receipt-item">
+                                <div class="volume-wrapper">
+                                    <h4 class="input-key">Volume:</h4>
+                                    <div class="input-wrapper">
+                                        <input name="vol" type="number" class="form-control volume update-part" value=<%=part.vol%>>
+                                        <h4>mm&#179;</h4>
                                     </div>
                                 </div>
-                                <div class="separator"></div>
+                                <div class="printer-wrapper">
+                                    <h4 class="input-key">Printer:</h4>
+                                    <div class="input-wrapper">
+                                        <select class="form-control printer update-part" id="print1">
+                                        <%
+                                            _.each(printers, function(printer){
+                                                var selected = printer.id == part.printer ? "selected" : ""
+                                        %>
+                                            <option <%=selected%> value=<%=printer.id%>>
+                                                <%=printer.name%>
+                                            </option>
+                                        <%
+                                            });
+                                        %>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="cost-wrapper">
+                                    <i class="remove-part fa fa-trash-o"></i>
+                                    <h4 class="cost-key">Estimated Cost: $<%=m(partCost)%></h4>
+                                </div>
                             </div>
-                        </script>
-                    </div>
+                        <%
+                            });
+                        %>
+                        </div>
                     <div class="add-part" >
                         +
                     </div>
@@ -189,7 +213,7 @@
                                 Sub Total:
                             </div>
                             <div class="value">
-                                $0
+                                $<%=m(subtotal)%>
                             </div>
                         </div> 
                         <div id="startup-cost" class="receipt-footer-item startup-cost">
@@ -197,7 +221,7 @@
                                 Startup Cost:
                             </div>
                             <div class="value">
-                                $5.00
+                                $<%=m(startup)%>
                             </div>
                         </div> 
                         <div id="total" class="receipt-footer-item total">
@@ -205,16 +229,18 @@
                                 Total:
                             </div>
                             <div class="value">
-                                $5
+                                $<%=m(startup + subtotal)%>
                             </div>
                         </div>   
                     </div>
-                    <div class="receipt-button">
-                        <div class="text">
-                            <i class="fa fa-calculator"></i>
-                            <h4>Generate Quote</h4> 
-                        </div>
-                    </div>
+                    <% 
+                        for( var i=0; i< 20; i++){
+                    %>
+                            <div class="receipt-tear"></div>
+                    <%
+                        }
+                    %>
+                </script>
                 </div>
             </div>
         </div>
@@ -257,9 +283,9 @@
                 105 South Mathews Avenue<br />
                 Urbana, IL 61801</p>
             </div>
-            <!-- <div class="col-lg-4 col-sm-6 text-center">
+            <div class="col-lg-4 col-sm-6 text-center">
                 <iframe width="350" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=University%20of%20Illinois%20at%20Urbana-Champaign%20Mechanical%20Engineering%20Building%2C%20West%20Green%20Street%2C%20Urbana%2C%20Illinois%2C%20United%20States&key=AIzaSyD9oHmO9F2nXYRWlyjlmBMQy6VdL5GmMXU"></iframe>
-            </div> -->
+            </div>
         </div>
     </section>
 
