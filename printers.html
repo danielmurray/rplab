@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>UIRPL</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="css/fonts.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/uirpl.css" type="text/css">
+    <link rel="stylesheet" href="css/printers.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top affix">
+        <div class="navbar-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-headr">
+                <div>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="logo-container">
+                    <a class="navbar-brand page-scroll" href="./index.html">
+                        <p>UIRPL</p>
+                        <img class="logo" src="img/logo2.png"></img>
+                    </a>
+                </div>
+                <a href="./print.html" class="print-now">PRINT&nbsp;PART</a>
+            </div>
+            
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#sls">SLS</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#pj">PJ</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#sla">SLA</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#fdm">FDM</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="background-img"></div>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>
+                    <span class="al">O</span><span class="o nal">ur</span>
+                    <span class="al">P</span><span class="p nal">rinters</span>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <div id="sections">
+        <script type="text/template" id="printers-template">
+            
+        <%
+            _.each(printers, function(printer){
+        %>
+        <section id=<%=printer.id%> class="printer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="printer-header col-lg-8 col-lg-offset-2 text-center">
+                        <h2 class="section-heading"><%=printer.type%></h2>
+                        <hr class="primary">
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-lg-offset-2 text-center printer-img">
+                        <img src="img/printers/<%=printer.id%>.png" class="img-responsive" alt="">
+                    </div>
+                    <div class="col-lg-4 col-sm-6 printer-det text-center">
+                        <h2>
+                            <%=printer.name%>
+                        </h2>
+                        <h3>
+                            <a href=<%=printer.link%> target="_blank">
+                                <i class="fa fa-cog" data-wow-delay=".1s"></i>
+                                <%=printer.oem%>
+                            </a>
+                        </h3>
+                        <h3>
+                            <a href="img/printers/<%=printer.id%>.pdf" target="_blank">
+                                <i class="fa fa-file-pdf-o" data-wow-delay=".1s"></i>
+                                Tech Sheet
+                            </a>
+                        </h3>
+                        <h3>
+                            <i class="fa fa-cube" data-wow-delay=".1s"></i>
+                            <%=printer.dim%>
+                        </h3>
+                    </div>
+                </div>
+                <div class="printer-materials-header text-center">
+                    <h3 class="section-heading">Materials</h3>
+                    <hr class="primary">
+                </div>
+                <div class="materials">
+                    <%
+                        _.each(printer.materials, function(material_id){
+                            material = materials[material_id];
+                    %> 
+                    <div id=<%=material.id%> class="printer-material">
+                        <img src="img/materials/<%=material.id%>.png" class="material-img">
+                        <div class="material-det text-center">
+                            <a href=<%=material.link%>  target="_blank">
+                                <h4><%=material.name%></h4>
+                            </a>
+                            <p><%=material.desc%></p>
+                        </div>
+                    </div>
+                    <%
+                       });
+                    %>
+                </div>
+            </div>
+        </section>
+        <%
+           })
+        %>
+        </script>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/us.js"></script>
+
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/uirpl.js"></script>
+    <script src="js/printers.js"></script>
+</body>
+
+</html>
+

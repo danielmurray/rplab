@@ -422,13 +422,15 @@ header .header-content .header-content-inner h1 .nal{
     header .header-content .header-content-inner h1 .nal{
         display: inline-block;
         white-space: nowrap;
+        text-align: left;
     }
 
-    .header-content .u.nal{ margin-left: -10px; width: 140px; }
+    .header-content .u.nal{ margin-left: -5px; width: 140px; }
     .header-content .i.nal{ margin-left: -5px; width: 80px; }
-    .header-content .r.nal{ margin-left: -5px; width: 60px; }
+    .header-content .r.nal{ margin-left: 0px; width: 60px; }
     .header-content .p.nal{ margin-left: -35px; width: 130px; }
-    .header-content .l.nal{ margin-left: -5px; width: 40px; }
+    .header-content .l.nal{ margin-left: 0px; width: 30px; }
+    .header-content .o.nal{ margin-left: -5px; width: 30px; }
 }
 
 
