@@ -238,6 +238,10 @@ header .header-content .header-content-inner h1 .nal{
     font-weight: bold;
 }
 
+.receipt .receipt-footer .receipt-footer-item.total .value{
+    margin-right: -10px;
+}
+
 .receipt .receipt-footer .key{
     float: left;
 }

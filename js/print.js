@@ -21,7 +21,7 @@
 	    	"pj":{
 	    		id: "pj",
 	    		name: "PolyJet",
-	    		cost: 0.34
+	    		cost: 0.52
 	    	},
 	    	"sla":{
 	    		id: "sla",
