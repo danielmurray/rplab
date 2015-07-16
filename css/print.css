@@ -1,3 +1,17 @@
+header .header-content .header-content-inner h1 .nal{
+    display: inline-block;
+    white-space: nowrap;
+    text-align: left;
+    font-size: 20px;
+}
+
+@media(min-width:768px) {
+    header .header-content .header-content-inner h1 .al{
+        color:#ee4b28;
+        font-size: 100px;
+    }
+}
+
 #create .col-lg-3{
 	padding: 30px;
 }
