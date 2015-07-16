@@ -99,11 +99,7 @@ aside {
     width: 100%;
     height:100%;
     display: flex;
-    justify-content: space-betwen;
-}
-
-.navbar-headr div{
-    display: table-cell;
+    justify-content: space-between;
 }
 
 .navbar-default .navbar-collapse li{
@@ -163,7 +159,6 @@ aside {
 }
 
 .navbar-default .navbar-headr .logo-container{
-    width: inherit;
     cursor: pointer;
 }
 
@@ -225,7 +220,7 @@ aside {
 
     transition: 0.5s;
     font-size: 12px;
-    padding: 23px 35px 0 15px;
+    padding: 23px 15px 0 15px;
 
     text-decoration: none;
 }
@@ -385,7 +380,7 @@ header .background-img{
 
 header .header-content {
     position: absolute;
-    bottom: 150px;
+    top: 150px;
 
     width: 100%;
     text-align: center;
