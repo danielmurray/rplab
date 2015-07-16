@@ -16,22 +16,22 @@
 	    	"sls":{
 	    		id: "sls",
 	    		name: "Selective Laser Sintering",
-	    		cost: 0.15
+	    		cost: 0.37
 	    	},
 	    	"pj":{
 	    		id: "pj",
 	    		name: "PolyJet",
-	    		cost: 0.25
+	    		cost: 0.34
 	    	},
 	    	"sla":{
 	    		id: "sla",
 	    		name: "Stereo Lithography Apparatus",
-	    		cost: 0.35
+	    		cost: 0.38
 	    	},
 	    	"fdm":{
 	    		id: "fdm",
 	    		name: "Fused Deposition Modeling",
-	    		cost: 0.45
+	    		cost: 0.33
 	    	},
 	    };
 
@@ -84,7 +84,7 @@
 				receipt.render()
 			})
 
-			$(".form-control.printer").change(function(e){
+			$(".form-control.printer").change(function(event){
 				var part = $(event.currentTarget).closest(".receipt-item")[0];
 				var optionSelected = $("option:selected", this)[0];
 				receipt.updatePart({
@@ -94,7 +94,7 @@
 				receipt.render()
 			})
 
-			$(".form-control.volume").change(function(e){
+			$(".form-control.volume").change(function(event){
 				var part = $(event.currentTarget).closest(".receipt-item")[0];
 				var volume = $(event.currentTarget)[0];
 				receipt.updatePart({

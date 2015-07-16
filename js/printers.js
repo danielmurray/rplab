@@ -12,9 +12,10 @@
 	    		id: "sls",
 	    		type: "Selective Laser Sintering",
 	    		name: "Formiga P100",
-	    		oem: "EOS SLS",
+	    		oem: "EOS",
 	    		link: "http://www.eos.info/systems_solutions/plastic/systems_equipment/formiga_p_110",
-	    		dim: "200 x 250 x 330 mm",
+	    		dmm: "200mm x 250mm x 330mm",
+	    		din: "7.9in x 9.8in x 13in",
 	    		cost: 0.15,
 	    		materials:[
 	    			"pa"
@@ -26,7 +27,8 @@
 	    		name: "Eden 350",
 	    		oem: "Objet Geometries",
 	    		link: "http://www.objet.com/Misc/Pages/ProductsEdenFamily/Eden350350V/tabid/73/Default.aspx",
-	    		dim: "350 x 350 x 200 mm",
+	    		dmm: "350mm x 350mm x 200mm",
+	    		din: "13.8in x 13.8in x 7.9in",
 	    		cost: 0.25,
 	    		materials:[
 	    			"tm",
@@ -40,7 +42,8 @@
 	    		name: "Viper SI",
 	    		oem: "3D Systems",
 	    		link: "http://www.3dsystems.com/3d-printers/production/overview",
-	    		dim: "250 x 250 x 250 mm",
+	    		dmm: "250mm x 250mm x 250mm",
+	    		din: "9.8in x 9.8in x 9.8in",
 	    		cost: 0.35,
 	    		materials:[
 	    			"pg",
@@ -48,17 +51,18 @@
 	    		]
 	    	},
 	    	"fdm":{
-	    		id: "fdm",
-	    		type: "Fused Deposition Modeling",
-	    		name: "Fortus 360 MC",
-	    		oem: "Stratasys",
-	    		link: "http://www.stratasys.com/3d-printers/production-series/fortus-360-400mc",
-	    		dim: "406 x 355 x 406 mm",
-	    		cost: 0.45,
-	    		materials:[
-	    			"abs",
-	    			"pc"
-	    		]
+				id: "fdm",
+				type: "Fused Deposition Modeling",
+				name: "Fortus 360 MC",
+				oem: "Stratasys",
+				link: "http://www.stratasys.com/3d-printers/production-series/fortus-360-400mc",
+				dmm: "406mm x 355mm x 406mm",
+				din: "16in x 14in x 16in",
+				cost: 0.45,
+				materials:[
+					"abs",
+					"pc"
+				]
 	    	},
 	    };
 

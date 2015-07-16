@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UIRPL</title>
+    <title>RPL</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -51,8 +51,8 @@
                 </div>
                 <div class="logo-container">
                     <a class="navbar-brand page-scroll" href="./index.html">
-                        <p>UIRPL</p>
                         <img class="logo" src="img/logo2.png"></img>
+                        <p>RPL</p>
                     </a>
                 </div>
                 <a href="./print.html" class="print-now">PRINT&nbsp;PART</a>
@@ -86,9 +86,10 @@
         <div class="header-content">
             <div class="header-content-inner">
                 <h1>
-                    <span class="al">H</span><span class="o nal">ow</span>
-                    <span class="al">T</span><span class="o nal">o</span>
-                    <span class="al">P</span><span class="p nal">rint</span>
+                    <span class="al">H</span><span class="h nal">ow to</span>
+                    <span class="al">P</span><span class="ps nal">rint a</span>
+                    <span class="al">P</span><span class="ps nal">art</span>
+
                 </h1>
             </div>
         </div>
@@ -98,7 +99,7 @@
         <div class="container-fluid">
             <div class="row gutters">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">1. Create an STL</h2>
+                    <h2 class="section-heading">1. Create a STL</h2>
                     <hr class="primary">
                     <p>First thing is first, you got to create an STL file.<br />Not sure how to make an STL file? Click on your CAD software below for step by step instructions!<p>
                 <div>
@@ -189,7 +190,7 @@
                                     <h4 class="input-key">Volume:</h4>
                                     <div class="input-wrapper">
                                         <input name="vol" type="number" class="form-control volume update-part" value=<%=part.vol%>>
-                                        <h4>mm&#179;</h4>
+                                        <h4>cm&#179;</h4>
                                     </div>
                                 </div>
                                 <div class="printer-wrapper">
@@ -201,7 +202,7 @@
                                                 var selected = printer.id == part.printer ? "selected" : ""
                                         %>
                                             <option <%=selected%> value=<%=printer.id%>>
-                                                <%=printer.name%>
+                                                <%=printer.name%> (<%=printer.id.toUpperCase()%>)
                                             </option>
                                         <%
                                             });
@@ -232,7 +233,7 @@
                         </div> 
                         <div id="startup-cost" class="receipt-footer-item startup-cost">
                             <div class="key">
-                                Startup Cost:
+                                Per Ticket Base Cost:
                             </div>
                             <div class="value">
                                 $<%=m(startup)%>
@@ -243,12 +244,12 @@
                                 Total:
                             </div>
                             <div class="value">
-                                $<%=m(startup + subtotal)%>
+                                $<%=m(startup + subtotal)%>*
                             </div>
                         </div>   
                     </div>
                     <% 
-                        for( var i=0; i< 20; i++){
+                        for( var i=0; i< 19; i++){
                     %>
                             <div class="receipt-tear"></div>
                     <%
@@ -258,6 +259,11 @@
                 </div>
             </div>
         </div>
+        <p class="receipt-disclaimer">
+            <span class="asterick">*</span>
+             Please take in consideration that this quote is just an estimate. Once your part is printed, it is weighed and is charged by the gram. Most prints will fall in &plusmn5% of this estimate.
+
+        </p>
     </section>
 
     <section id="ticket">
@@ -268,9 +274,9 @@
                     <hr class="primary">
                     <p>You're almost there!<br />If you're a student, all you have left to do is fill out a form on<br />the University's online ticketing system to get your part inline to print. 
                     </p>
-                    	<a href="https://www-s.mechse.uiuc.edu/rplab/notice.php" class="btn btn-default btn-xl wow tada" target="_blank">Submit a Ticket</a>
+                    	<a href="https://www-s.mechse.uiuc.edu/rplab/ticket_edit.php" class="btn btn-default btn-xl wow tada" target="_blank">Submit a Ticket</a>
 
-                    <p>If you are a not a student, send us an email, we'll help you get setup<p>
+                    <p>If you are a not a student, send us an email, we'll help you get your part made<p>
                     <a href="mailto:mechse-rplab@illinois.edu" class="print-now btn btn-default btn-xl wow tada">Send us an Email</a>
                 <div>
             </div>
@@ -280,25 +286,36 @@
     <section id="pickup" class="bg-dark">
         <div class="container text-center">
             <div>
-        		<h2 class="section-heading">
-        			<span class='strikeout'>4. PROFIT!!!</span> 
-            	</h2>
                 <h2 class="section-heading">
                 	4. Pick up your part!
                 </h2>
                 <hr class="light">
             </div>
-            <div class="col-lg-4 col-sm-6 col-lg-offset-2 text-center ">
-            	<i class="fa fa-cube fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-            	<p>You can come pick up your parts at the MEL outside the Rapid Prototyping Lab, room 2051.
-                </p>
-                <i class="fa fa-map-marker fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <p>Room 2051<br />
-                105 South Mathews Avenue<br />
-                Urbana, IL 61801</p>
+
+            <div class="pickup-stuff text-center">
+                <div class="pickup-pic">
+                    <div class="here-circle">
+                    </div>
+                    <img src="img/lab.png"></img>
+                </div>
+                <div>
+                	<i class="fa fa-cube fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                	<p>
+                        Woohoo, Your part is done! You will receive an email when your part is ready to be picked up from the table outside the Rapid Prototyping Lab at the Mechanical Engineering Laboratory, Room 2051.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-4 col-sm-6 text-center">
-                <iframe width="350" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=University%20of%20Illinois%20at%20Urbana-Champaign%20Mechanical%20Engineering%20Building%2C%20West%20Green%20Street%2C%20Urbana%2C%20Illinois%2C%20United%20States&key=AIzaSyD9oHmO9F2nXYRWlyjlmBMQy6VdL5GmMXU"></iframe>
+            <div class="pickup-stuff text-center">
+                <div>
+                    <i class="fa fa-map-marker fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p>
+                        Mechanical Engineering Laboratory<br />
+                        MEL Room 2051<br />
+                        105 South Mathews Avenue<br />
+                        Urbana, IL 61801
+                    </p>
+                </div>
+                <iframe width="350" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Mechanical+Engineering+Laboratory,+South+Mathews+Avenue,+Urbana,+IL,+United+States&key=AIzaSyD9oHmO9F2nXYRWlyjlmBMQy6VdL5GmMXU" allowfullscreen></iframe>
             </div>
         </div>
     </section>

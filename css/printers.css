@@ -1,5 +1,5 @@
 header {
-    min-height: 60%;
+    max-height: 60%;
 }
 
 header .background-img{
@@ -54,7 +54,7 @@ header .header-content .header-content-inner>p{
 }
 
 .printer-materials-header{
-    margin-bottom: 30px;
+    margin: 30px auto;
 }
 
 .printer-section .materials{

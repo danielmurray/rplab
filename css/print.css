@@ -1,5 +1,5 @@
 header {
-    min-height: 60%;
+    max-height: 60%;
 }
 
 header .background-img{
@@ -72,17 +72,46 @@ header .header-content .header-content-inner>p{
     width: 110%;
 }
 
+#pickup .here-circle{
+    position: absolute;
+    right: -40px;
+    top: 65px;
+    height: 150px;
+    width: 150px;
+
+    border: solid 10px white;
+    border-radius: 100px;
+}
+
+#pickup .pickup-stuff:hover .pickup-pic .here-circle{
+    border: solid 50px white;
+}
+
+#pickup img{
+    width: 350px;
+    height: 250px;
+}
+
 #pickup div p{
 	margin: 0 10px;
 }
 
-#pickup .col-lg-4{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
 #pickup i{
 	margin: 20px auto;
+}
+
+#pickup .pickup-stuff{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+#pickup .pickup-stuff>div{
+    position: relative;
+    width: 350px;
+    margin: 0 20px;
 }
 
 /*
@@ -91,7 +120,7 @@ header .header-content .header-content-inner>p{
 
 .receipt{
     position: relative;
-    width: 400px;
+    width: 380px;
     margin: 30px auto 0px auto;
     background-color: rgb(255,255,255);
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
@@ -161,12 +190,13 @@ header .header-content .header-content-inner>p{
 }
 
 .receipt .receipt-item .volume-wrapper .input-wrapper input{
-    width: 180px;
+    width: 170px;
     float: left;
 }
 
 .receipt .receipt-item .volume-wrapper .input-wrapper h4{
     float: right;
+    margin-right: 13px;
 }
 
 .receipt .receipt-item .cost .cost-key,
@@ -248,3 +278,18 @@ header .header-content .header-content-inner>p{
     border-width: 10px;
     border-color: rgb(240,240,240) transparent transparent transparent;
 }
+
+#quote .receipt-disclaimer{
+    max-width: 750px;
+    color: white;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#quote .receipt-disclaimer .asterick{
+    color: black;
+    font-size: 22px;
+}
+
+#pickup 

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>UIRPL</title>
+    <title>RPL</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -51,8 +51,8 @@
                 </div>
                 <div class="logo-container">
                     <a class="navbar-brand page-scroll" href="./index.html">
-                        <p>UIRPL</p>
                         <img class="logo" src="img/logo2.png"></img>
+                        <p>RPL</p>
                     </a>
                 </div>
                 <a href="./print.html" class="print-now">PRINT&nbsp;PART</a>
@@ -114,8 +114,8 @@
                             <%=printer.name%>
                         </h2>
                         <h3>
+                            <i class="fa fa-cog" data-wow-delay=".1s"></i> Manufacturer: 
                             <a href=<%=printer.link%> target="_blank">
-                                <i class="fa fa-cog" data-wow-delay=".1s"></i>
                                 <%=printer.oem%>
                             </a>
                         </h3>
@@ -127,7 +127,13 @@
                         </h3>
                         <h3>
                             <i class="fa fa-cube" data-wow-delay=".1s"></i>
-                            <%=printer.dim%>
+                            Building Envelope
+                        </h3>
+                        <h3>
+                            <%=printer.dmm%>
+                        </h3>
+                        <h3>
+                            <%=printer.din%>
                         </h3>
                     </div>
                 </div>
