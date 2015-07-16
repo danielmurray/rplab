@@ -347,7 +347,7 @@ aside {
 header {
     position: relative;
     width: 100%;
-    height: 60%;
+    height: 500px;
     text-align: center;
     color: #fff;
 
@@ -371,11 +371,11 @@ header .background-img{
     background-size: cover;
     -o-background-size: cover;
 
-    filter: blur(1px);
-    -webkit-filter: blur(1px);
-    -moz-filter: blur(1px);
-    -o-filter: blur(1px);
-    -ms-filter: blur(1px);
+    filter: blur(0.5px);
+    -webkit-filter: blur(0.5px);
+    -moz-filter: blur(0.5px);
+    -o-filter: blur(0.5px);
+    -ms-filter: blur(0.5px);
 }
 
 header .header-content {
@@ -407,6 +407,10 @@ header .header-content .header-content-inner h1 .nal{
 @media(min-width:768px) {
     header {
         height: 100%;
+    }
+
+    header .header-content {
+        top: 400px;
     }
 
     header .header-content .header-content-inner>p{
